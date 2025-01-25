@@ -42,11 +42,13 @@ form.addEventListener("submit", function (event) {
 
   //on teste le email
   if (!regexEmail.test(vEmail)) {
-    document.querySelector("# ").classList.remove("d-none");
+    document.querySelector("#emailErrors").classList.remove("d-none");
+    document.querySelector(".iconeX").classList.remove("d-none");
+    document.querySelector(".iconeX").classList.replace("bi-check", "bi-x");
   } else {
-    document.querySelector(".iconeEmail").classList.remove("d-none");
-    document.querySelector(".iconeEmail").classList.replace("bi-x", "bi-check");
-    document.querySelector(".iconeEmail").style.color = "green";
+    document.querySelector(".iconeX").classList.remove("d-none");
+    document.querySelector(".iconeX").classList.replace("bi-x", "bi-check");
+    document.querySelector(".iconeX").style.color = "green";
   }
 
   //on teste le mot de passe
