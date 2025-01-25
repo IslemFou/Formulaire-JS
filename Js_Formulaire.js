@@ -27,10 +27,12 @@ myForm.addEventListener("submit", function (event) {
 
   //   Déclaration d'un regex
   let regexmail = /^[a-z0-9.%-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  let regexmdp = /^(?=.*[a-z])(?=.*[A-Z])(?=.\d)(?=.*[#$^+=!*()@%&].{8,10})$/;
+  // let regexmdp = /^(?=.*[a-z])(?=.*[A-Z])(?=.\d)(?=.*[#$^+=!*()@%&].{8,10})$/;
+  let regexmdp =
+    /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/;
 
   //---- On traite le pseudo
-  if (lengthPseudo < 5 || lengthPseudo > 15) {
+  if (lengthPseudo <= 5 || lengthPseudo >= 15) {
     //on saisie la condition du faux
     //alert("Entrer un pseudo valide");
     document.querySelector("#pseudoError").classList.remove("d-none");
@@ -38,7 +40,7 @@ myForm.addEventListener("submit", function (event) {
     document.querySelector(".iconeX").style.color = "red";
   } else {
     document.querySelector(".iconeX").classList.remove("d-none");
-    // document.querySelector("#pseudoError").classList.add("d-none");
+    document.querySelector("#pseudoError").classList.add("d-none");
     document.querySelector(".iconeX").classList.replace("bi-x", "bi-check");
     document.querySelector(".iconeX").style.color = "green";
   }
@@ -53,6 +55,7 @@ myForm.addEventListener("submit", function (event) {
     document.querySelector(".iconeX").classList.replace("bi-x", "bi-check");
     document.querySelector(".iconeX").style.color = "green";
     document.querySelector(".iconeX").classList.remove("d-none");
+    document.querySelector("#emailError").classList.add("d-none");
   }
 
   //tester le mot de passe
