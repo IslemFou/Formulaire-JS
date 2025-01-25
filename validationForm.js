@@ -42,7 +42,7 @@ form.addEventListener("submit", function (event) {
 
   //on teste le email
   if (!regexEmail.test(vEmail)) {
-    document.querySelector("#emailErrors").classList.remove("d-none");
+    document.querySelector("#emailError").classList.remove("d-none");
     document.querySelector(".iconeX").classList.remove("d-none");
     document.querySelector(".iconeX").classList.replace("bi-check", "bi-x");
   } else {
