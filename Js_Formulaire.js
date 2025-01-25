@@ -33,16 +33,14 @@ myForm.addEventListener("submit", function (event) {
   if (lengthPseudo < 5 || lengthPseudo > 15) {
     //on saisie la condition du faux
     //alert("Entrer un pseudo valide");
-    document.querySelector("#pseudoError").classList.add("error");
     document.querySelector("#pseudoError").classList.remove("d-none");
-    document.querySelector(".iconePseudo").style.color = "red";
+    document.querySelector(".iconeX").classList.remove("d-none");
+    document.querySelector(".iconeX").style.color = "red";
   } else {
-    document.querySelector(".iconePseudo").classList.remove("d-none");
-    document.querySelector("#emailError").classList.add("d-none");
-    document
-      .querySelector(".iconePseudo")
-      .classList.replace("bi-x", "bi-check");
-    document.querySelector(".iconePseudo").style.color = "green";
+    document.querySelector(".iconeX").classList.remove("d-none");
+    // document.querySelector("#pseudoError").classList.add("d-none");
+    document.querySelector(".iconeX").classList.replace("bi-x", "bi-check");
+    document.querySelector(".iconeX").style.color = "green";
   }
 
   //---- on teste le email, on utilise les regex
@@ -52,9 +50,9 @@ myForm.addEventListener("submit", function (event) {
     document.querySelector("#emailError").classList.remove("d-none");
     // document.querySelector("#emailError").style.color =
   } else {
-    document.querySelector(".iconeEmail").classList.replace("bi-x", "bi-check");
-    document.querySelector(".iconeEmail").style.color = "green";
-    document.querySelector(".iconeEmail").classList.remove("d-none");
+    document.querySelector(".iconeX").classList.replace("bi-x", "bi-check");
+    document.querySelector(".iconeX").style.color = "green";
+    document.querySelector(".iconeX").classList.remove("d-none");
   }
 
   //tester le mot de passe
@@ -63,6 +61,9 @@ myForm.addEventListener("submit", function (event) {
     document.querySelector("#passwordError").classList.add("error");
     document.querySelector("#passwordError").classList.remove("d-none");
   } else {
+    document.querySelector("").classList.add("bi-check");
+    document.querySelector("").style.color = "green";
+    document.querySelector("").classList.remove("d-none");
   }
 });
 

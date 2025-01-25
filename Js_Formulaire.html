@@ -11,44 +11,54 @@
 </head>
   </head>
   <body>
-    <main class="container">
+    <main class="container-md bg-info-subtle">
         <h1>Validation de formulaire en Js</h1>
         <form action="">
-            <div class="mb-3">
+            <!-- pseudo -->
+            <div class="mb-3 col-md-8 col-sm-12">
                 <i class="bi bi-person-fill fs-5"></i>
                 <label for="pseudo" class="form-label">Pseudo</label>
-                <div class="positionPseudo">
+                <div class="position">
                     <input type="texte" class="form-control" id="pseudo" placeholder="pseudo">
-                    <i class="bi bi-x iconePseudo d-none"></i>
+                    <i class="bi bi-x iconeX text-danger d-none"></i>
                 </div>
                 <!-- En utilisant la classe text-danger -->
                 <!-- <p id="pseudoError" class="d-none text-danger">* Le pseudo n'est pas valide</p> -->
                 <!-- en utilisant CSS -->
-                <p id="pseudoError" class="d-none">* Le pseudo n'est pas valide</p>
+                <p id="pseudoError" class="d-none error col-8 mx-4">* Le pseudo n'est pas valide</p>
             </div>
-            <div class="mb-3">
+
+
+            <!-- email -->
+            <div class="mb-3 col-md-8 col-sm-12">
                 <i class="bi bi-envelope-at-fill fs-5"></i>
                 <label for="email" class="form-label">Email</label>
-                <div class="positionEmail">
+                <div class="position">
                     <input type="text" class="form-control" id="email" placeholder="adresse email">
-                    <i class="bi bi-x iconeEmail d-none"></i>
+                    <i class="bi bi-x iconeX d-none"></i>
                 </div>
-                <p id="emailError" class="d-none">* Le email n'est pas valide</p>
+                <p id="emailError" class="d-none error col-8 mx-4">* Le email n'est pas valide</p>
             </div>
-            <div class="mb-3">
+
+
+
+            
+            <!-- Password -->
+            <div class="mb-3 col-md-8 col-sm-12">
                 <i class="bi bi-shield-lock-fill fs-5"></i>
                 <label for="password" class="form-label">Mot de passe</label>
-                <div class="positionMdp">
+                <div class="position">
                     <input type="password" class="form-control" id="password" placeholder="votre mot de passe">
-                    <i id="showPassword" class="bi bi-eye-slash-fill iconeMdp"></i>
+                    <i id="showPassword" class="bi bi-eye-slash-fill iconeMdp"></i><i class="bi bi-x iconeX d-none"></i>
                 </div>
-                <p id="passwordError" class="d-none">* Le mot de passe n'est pas valide</p>
+                <p id="passwordError" class="d-none error col-8 mx-4">* Le mot de passe n'est pas valide</p>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Soumettre</button>
         </form>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./Js_Formulaire.js"></script>
+    <!-- <script src="./Js_Formulaire.js"></script> -->
+    <script src="./validationForm.js"></script>
 </body>
 </html>
