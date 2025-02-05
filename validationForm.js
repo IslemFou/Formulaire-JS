@@ -6,6 +6,7 @@ let pseudo = document.querySelector("#pseudo");
 // console.log(pseudo);
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
+
 let xIcon = document.querySelector(".iconeX");
 let xIconEmail = document.querySelector(".iconeXEmail");
 let eyeIcon = document.querySelector(".iconeMdp");
